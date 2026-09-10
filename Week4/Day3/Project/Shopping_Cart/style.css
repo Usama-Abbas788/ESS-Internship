@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #111827;
+  color: #fff;
+}
+
+/* Glass Card Container */
+.login-box {
+  width: 400px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+/* Input Fields */
+.input-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #6b7280;
+  outline: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+/* Floating Label Mechanics */
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+.input-box input:focus ~ label,
+.input-box input:not(:placeholder-shown) ~ label {
+  top: -10px;
+  font-size: 0.85rem;
+  color: #6366f1;
+}
+
+.input-box input:focus {
+  border-bottom-color: #6366f1;
+}
+
+/* Hide initial placeholder text so floating labels look clean */
+.input-box input::placeholder {
+  color: transparent;
+}
+
+/* Icons styling */
+.input-box .icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #9ca3af;
+}
+
+/* Checkbox and Forgot Password Link */
+.remeber-forget {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  margin-bottom: 25px;
+}
+
+.remeber-forget label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #d1d5db;
+}
+
+.remeber-forget input[type="checkbox"] {
+  accent-color: #6366f1;
+}
+
+.remeber-forget a {
+  color: #818cf8;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.remeber-forget a:hover {
+  text-decoration: underline;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: #6366f1;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #4f46e5;
+}
+
+/* Register Link Footer */
+#register-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.875rem;
+  color: #d1d5db;
+}
+
+#register-link a {
+  color: #818cf8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#register-link a:hover {
+  text-decoration: underline;
+}
